@@ -1,0 +1,70 @@
+/*
+ * PROJECT THEME — the only file you edit to change how this app looks.
+ *
+ * Every value is a space-separated R G B channel triplet: no commas, no '#'.
+ * Convert the hex you want:  #f59e0b -> 245 158 11.
+ *
+ * Tailwind maps each variable below to a semantic utility, so bg-primary,
+ * text-muted-foreground, border-border and opacity modifiers like bg-primary/10
+ * all follow from these values. Rewrite the VALUES to give this project its own
+ * identity. Do not rename or delete a variable.
+ *
+ * For an app that should look dark, set these root values to dark colours
+ * (e.g. --background: 2 6 23; --foreground: 241 245 249). Do NOT add `dark:`
+ * variants unless the brief asks for a user-togglable light/dark switch.
+ *
+ * You may also add plain @keyframes rules to this file. Do not use @layer or
+ * @apply here.
+ */
+
+/* Import Noto Naskh Arabic for proper Urdu/Arabic script rendering */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+/* Urdu font utility class — apply to elements containing Urdu/Arabic text */
+.font-urdu {
+  font-family: 'Noto Naskh Arabic', 'Traditional Arabic', 'Arial', sans-serif;
+  line-height: 1.8;
+}
+
+:root {
+  /* Corner radius for the whole app. 0 = square, 0.5rem = subtle,
+     0.75rem = default, 1.25rem = soft/rounded. */
+  --radius: 0.75rem;
+
+  /* Page background and body text - Professional white/blue theme */
+  --background: 248 250 252;      /* #F8FAFC - light gray-blue background */
+  --foreground: 30 41 59;         /* #1E293B - dark slate text */
+
+  /* Cards, panels, modal bodies, form controls */
+  --card: 255 255 255;            /* #FFFFFF - pure white */
+  --card-foreground: 30 41 59;    /* #1E293B */
+
+  /* De-emphasised surfaces and text: hover fills, captions, placeholders */
+  --muted: 241 245 249;           /* #F1F5F9 */
+  --muted-foreground: 100 116 139; /* #64748B */
+
+  /* Brand colour — primary buttons, active states, focus ring - Blue */
+  --primary: 37 99 235;           /* #2563EB - bright blue */
+  --primary-foreground: 255 255 255;
+
+  /* Neutral action — Cancel buttons, secondary chips */
+  --secondary: 241 245 249;       /* #F1F5F9 */
+  --secondary-foreground: 30 41 59;
+
+  /* Soft brand tint — icon chips, active nav item, highlighted row */
+  --accent: 239 246 255;          /* #EFF6FF - light blue tint */
+  --accent-foreground: 29 78 216; /* #1D4ED8 - darker blue */
+
+  /* Destructive — delete buttons, form errors */
+  --destructive: 220 38 38;       /* #DC2626 */
+  --destructive-foreground: 255 255 255;
+
+  /* Status accents (used by <Alert variant="success" | "warning" />) */
+  --success: 22 163 74;           /* #16A34A */
+  --warning: 217 119 6;           /* #D97706 */
+
+  /* Lines and focus */
+  --border: 226 232 240;          /* #E2E8F0 - dividers, card borders */
+  --input: 203 213 225;           /* #CBD5E1 - form control borders */
+  --ring: 37 99 235;              /* #2563EB - focus ring matches primary */
+}
